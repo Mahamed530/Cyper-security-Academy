@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Academy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .course-list {
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .course {
+            background-color: #e7e7e7;
+            padding: 15px;
+            border-radius: 8px;
+            width: 30%;
+            text-align: center;
+        }
+
+        .course h3 {
+            margin-top: 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #003;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #003;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .subscription {
+            background-color: #d1ecf1;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .subscription input[type="email"] {
+            padding: 10px;
+            width: 80%;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .subscription button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .subscription button:hover {
+            background-color: #0056b3;
+        }
+.        
+nav ul li a i {
+    margin-right: 5px; /* لزيادة المسافة بين الأيقونة والنص */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* حجم النص */
+}
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>أكاديمية الأمن السيبراني</h1>
+    <nav>
+    <ul>
+        <li><a href="Academy.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+        <li><a href="courses.html"><i class="fas fa-book"></i> الدورات</a></li>
+        <li><a href="communication.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+        <li><a href="pp.html"><i class="fas fa-bell"></i> اشترك الآن</a></li>
+        <li><a href="https://www.kali.org/get-kali/"><i class="fas fa-download"></i> تحميل الكالي لينكس</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <section id="home">
+        <h2>مرحباً بكم في أكاديمية الأمن السيبراني</h2>
+        <p>نقدم لكم أفضل الدورات التدريبية في مجال الأمن السيبراني لتطوير مهاراتكم وحمايتكم من الهجمات الإلكترونية.</p>
+    </section>
+
+    <section id="courses">
+        <h2>الدورات المتاحة</h2>
+        <div class="course-list">
+            <div class="course">
+                <h3>أساسيات الأمن السيبراني</h3>
+                <p>تعرف على أساسيات الأمن السيبراني وأهميته في العصر الرقمي.</p>
+                <button onclick="enroll('أساسيات الأمن السيبراني')">التسجيل</button>
+            </div>
+            
+            <div class="course">
+                <h3>اختبار الاختراق</h3>
+                <p>تعلم كيفية إجراء اختبارات الاختراق وتقييم نقاط الضعف في الأنظمة.</p>
+                <button onclick="enroll('اختبار الاختراق')">التسجيل</button>
+            </div>
+            
+            <div class="course">
+                <h3>تحليل وإكتشاف الثغرات</h3>
+                 <p>تعد الثغرات الأمنيه احد أهم اسباب اختراق أنظامه الأمن في العالم وأيضاً حمايتها واليوم سوف نعلمك كيف تجدها وتستغلها </p>
+                <button onclick="enroll('تحليل وإكتشاف الثغرات')">التسجيل</button>
+            </div>
+            
+            <div class="course">
+                <h3>التحليل الجنائي الرقمي</h3>
+                <p>استكشف كيفية التحقيق في الجرائم الرقمية واستعادة الأدلة.</p>
+                <button onclick="enroll('التحليل الجنائي الرقمي')">التسجيل</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="subscribe">
+        <h2>اشترك الآن للحصول على آخر المستجدات</h2>
+        <div class="subscription">
+            <input type="email" id="subscriberEmail" placeholder="أدخل بريدك الإلكتروني">
+            <button onclick="subscribe()">اشترك</button>
+        </div>
+    </section>
+ 
+    </section>
+
+    <footer>
+        <p>&copy; 2024 أكاديمية الأمن السيبراني. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        function enroll(courseName) {
+            alert("لقد تم تسجيلك في دورة " + courseName + " بنجاح!");
+        }
+
+        function subscribe() {
+            var email = document.getElementById("subscriberEmail").value;
+            if (email) {
+                alert("شكراً لاشتراكك! سيتم إرسال آخر المستجدات إلى بريدك الإلكتروني: " + email);
+            } else {
+                alert("يرجى إدخال بريدك الإلكتروني للاشتراك.");
+            }
+        }
+
+        document.getElementById("contactForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            alert("تم إرسال رسالتك بنجاح! سنقوم بالتواصل معك قريباً.");
+        });
+    </script>
+</body>
+</html>

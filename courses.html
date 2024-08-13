@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>الدورات التدريبيه</title>
+  <style>
+   .course-list {
+         display: flex;
+         gap: 20px;
+         justify-content: space-around;
+       }
+    
+       .course {
+         background-color: #e7e7e7;
+         padding: 15px;
+         border-radius: 8px;
+         width: 30%;
+         text-align: center;
+       }
+    
+       .course h3 {
+         margin-top: 0;
+       }
+    
+       button {
+         padding: 10px 20px;
+         background-color: #333;
+         color: white;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+       }
+    
+       button:hover {
+         background-color: #555;
+       }
+  </style>
+</head>
+
+<body>
+  
+    <section id="courses">
+        <h2>الدورات المتاحة</h2>
+        <div class="course-list">
+            <div class="course">
+                <h3>أساسيات الأمن السيبراني</h3>
+                <p>تعرف على أساسيات الأمن السيبراني وأهميته في العصر الرقمي
+                500ج.</p>
+                <button onclick="enroll('أساسيات الأمن السيبراني')">التسجيل</button>
+            </div>
+            
+            <div class="course">
+                <h3>اختبار الاختراق</h3>
+                <p>تعلم كيفية إجراء اختبارات الاختراق وتقييم نقاط الضعف في الأنظمه 500ج.</p>
+                <button onclick="enroll('اختبار الاختراق')">التسجيل</button>
+            </div>
+            <div class="course">
+                <h3>التحليل الجنائي الرقمي</h3>
+                <p>استكشف كيفية التحقيق في الجرائم الرقمية واستعادة الأدلة500ج.</p>
+                 <script>
+        function enroll(courseName) {
+            alert("لقد تم تسجيلك في دورة " + courseName + " بنجاح!");
+        }
+        </script>
+                <button onclick="enroll('التحليل الجنائي الرقمي')">التسجيل</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="subscribe">
+        <h2>اشترك الآن للحصول على آخر المستجدات</h2>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 أكاديمية الأمن السيبراني. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        function enroll(courseName) {
+            alert("لقد تم تسجيلك في دورة " + courseName + " بنجاح!");
+
+        document.getElementById("contactForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            alert("تم إرسال رسالتك بنجاح! سنقوم بالتواصل معك قريباً.");
+        });
+    </script>
+</body>
+</html>
